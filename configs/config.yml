@@ -1,0 +1,22 @@
+DisablePathCorrection: false
+EnablePathEscape: false
+FireMethodNotAllowed: true
+DisableBodyConsumptionOnUnmarshal: true
+TimeFormat: Mon, 01 Jan 2006 15:04:05 GMT
+Charset: UTF-8
+
+Other:
+  datasource:
+    type: mysql
+    host: 127.0.0.1
+    username: username
+    password: password
+    database: dbname
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 0
+    maxIdle: 0
+    maxOpen: 0
+    timeoute: 0
