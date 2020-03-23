@@ -11,7 +11,7 @@ import (
 
 var (
 	Root, _  = os.Getwd()
-	YamlConf = iris.YAML(filepath.Join(Root, "config", "config.yml")) // 加载配置文件
+	YamlConf = iris.YAML(filepath.Join(Root, "configs", "config.yml")) // 加载配置文件
 )
 
 func GetConfigString(name string) string {
@@ -24,7 +24,6 @@ func GetConfigString(name string) string {
 			return v
 		}
 
-		//return GetValue(name, Isc.Other)
 	}
 
 	if val, ok := YamlConf.Other[name]; ok {
