@@ -45,15 +45,12 @@ func GetConfigInt(name string) int {
 			}
 			return 0
 		}
-
-		//return GetValue(name, Isc.Other)
 	}
 
 	if val, ok := YamlConf.Other[name]; ok {
 		if i, err := strconv.Atoi(fmt.Sprintf("%v", val)); err != nil {
 			return i
 		}
-		//return int(fmt.Sprintf("%v", val))
 	}
 
 	return 0
@@ -65,8 +62,6 @@ func getValue(name string, conf map[string]interface{}) (string, error) {
 		firstName := names[0]
 		subName := strings.Join(names[1:], ".")
 		if val, ok := conf[firstName]; ok {
-			//fmt.Printf("%s", val)
-			//do something here
 			switch v := val.(type) {
 			case map[string]interface{}:
 				return getValue(subName, v)
@@ -78,8 +73,6 @@ func getValue(name string, conf map[string]interface{}) (string, error) {
 		} else {
 			return "", fmt.Errorf("没有找到配置项")
 		}
-		//GetValue(subName)
 	}
-
 	return fmt.Sprintf("%v", conf[name]), nil
 }
