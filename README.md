@@ -21,15 +21,25 @@
 ####目录结构
 
 ├── cache  缓存Redis配置
+
 ├── configs  配置文件
+
 ├── databases  数据源
+
 ├── datamodels  数据对象
+
 ├── logs 日志存放目录
+
 ├── repositories  Repository
+
 ├── services  Service
+
 └── web  网站
+
     ├── controllers  Controllers
+    
     ├── dtos 传输对象
+    
     └── middlewares 中间件
 
 
